@@ -8,10 +8,13 @@ const IssueList = () => {
   const [issues, setIssues] = useState<IIssue[]>([]);
 
   useEffect(() => {
-    getIssues().then(apiIssues => {
-      return setIssues(apiIssues);
-    });
+    fetchIssues();    
   }, [])
+
+  const fetchIssues = async () => {
+    const data = await getIssues();
+    setIssues(data);
+ }
 
   return (
     <div className="issues">
