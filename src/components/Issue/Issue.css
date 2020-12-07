@@ -1,0 +1,33 @@
+.issue {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    padding: 12px;
+}
+
+.issue-row {
+    display: flex;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 4px 0;
+}
+
+.title {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+  
+  
