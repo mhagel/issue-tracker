@@ -9,8 +9,6 @@ type IssueProps = {
 };
 
 const Issue: React.FC<IssueProps> = ({ issue }) => {
-
-
   return (
         <div className="issue">
             <div className="issue-row">
@@ -23,10 +21,10 @@ const Issue: React.FC<IssueProps> = ({ issue }) => {
             </div>
             <div className="issue-row">
                 <div className="text">
-                    created {moment(issue.created_at).clone().format('l')}
+                    opened {moment(issue.created_at).clone().format('MMM D YYYY')}
                 </div>
                 <div className="text">
-                    last updated {moment(issue.updated_at).clone().format('l')}
+                    last updated {moment(issue.updated_at).clone().fromNow()}
                 </div>
             </div>
         </div>
