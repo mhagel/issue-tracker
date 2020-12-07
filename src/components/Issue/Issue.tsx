@@ -1,6 +1,8 @@
 import React from 'react';
 import './Issue.css';
 import  { IIssue } from '../../models/IIssue';
+import Link from '../Link/Link';
+import moment from 'moment';
 
 type IssueProps = {
     issue: IIssue;
@@ -11,13 +13,21 @@ const Issue: React.FC<IssueProps> = ({ issue }) => {
 
   return (
         <div className="issue">
-            <div className="issue-row title-row">
-                <a className="title" href={issue.html_url}>
+            <div className="issue-row">
+                <Link className="title" url={issue.html_url}>
                     {issue.title}
-                </a>
+                </Link>
+                <Link className="issue-number" url={issue.html_url}>
+                    #{issue.number}
+                </Link>
             </div>
             <div className="issue-row">
-                #{issue.number}
+                <div className="text">
+                    created {moment(issue.created_at).clone().format('l')}
+                </div>
+                <div className="text">
+                    last updated {moment(issue.updated_at).clone().format('l')}
+                </div>
             </div>
         </div>
   );

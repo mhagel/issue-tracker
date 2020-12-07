@@ -15,7 +15,7 @@ const IssueList = () => {
 
   return (
     <div className="issues">
-      {issues.map(issue => <Issue key={issue.id} issue={issue}/>)}
+      {issues.map(issue => <Issue key={issue.id} issue={issue} />)}
     </div>
   );
 }

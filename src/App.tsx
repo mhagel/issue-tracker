@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Issue Tracker
+          Cosmos SDK - Open Issues
         </p>
       </header>
       <IssueList />
